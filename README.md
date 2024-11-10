@@ -1,6 +1,6 @@
 # PLUGIN SKYWARS
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="TSW.png" alt="img plugin">
 
 > PLUGIN USADO E EDITADO "TALONSKYWARS".
 
