@@ -1,0 +1,21 @@
+# talonskywars.lobby.fly - Voar no lobby
+# talonskywars.chat.color - Falar com cores no chat.
+# talonskywars.chat.delay - Burlar delay do chat.
+# talonskywars.cmd.give - usar /darcoins e /darfragmentos
+# talonskywars.cmd.skywars - Usar /sw
+# talonskywars.cmd.spectate - usar /assistir player <jogador>
+# talonskywars.cmd.spectatearena - usar /assistir arena <mundo>
+# talonskywars.selectmap.infinite - usar o seletor de mapas sem limite diário
+# talonskywars.update - receber notificações ao entrar de UPDATES
+mode: MULTIARENA
+username: seuusuario
+password: suasenha
+backend:
+  type: SQLite
+  host: localhost
+  port: 3306
+  database: MCServer
+  username: root
+  password: ''
+rooms: []
+lobby: lobby, -44.5, 56.0, 0.0, -92.13917, -0.7838815

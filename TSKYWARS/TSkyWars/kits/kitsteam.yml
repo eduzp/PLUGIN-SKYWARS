@@ -1,0 +1,597 @@
+######################################################################################################################################################
+#                                                                                                                                                    #
+# ITEMSTACK:                                                                                                                                         #
+#                                                                                                                                                    #
+# MATERIAL:DURABILITY : AMOUNT : (customizable keys)                                                                                                 #
+#                                                                                                                                                    #
+# customizable keys:                                                                                                                                 #
+# - enchantments=ENCHANTMENT:LEVEL                                                                                                                   #
+# - display=DISPLAYNAME                                                                                                                              #
+# - lore=CURRENTLINE\nNEXTLINE                                                                                                                       #
+# - owner=SKULLOWNER (only for skull_item)                                                                                                           #
+# - page=FIRSTPAGE{page}NEXTPAGE (only for book)                                                                                                     #
+# - author=AUTHOR OF BOOK (only for book)                                                                                                            #
+# - title=TITLEOF BOOK (only for book)                                                                                                               #
+# - flags=ITEMFLAG (hide ItemFlags like the damage of the sword)                                                                                     #
+#                                                                                                                                                    #
+# avaibleflags: HIDE_ATTRIBUTES, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE, HIDE_PLACED_ON, HIDE_DESTROYS, HIDE_ENCHANTS                                 #
+#                                                                                                                                                    #
+# OBS: flags=all for all flags!                                                                                                                      #
+#                                                                                                                                                    #
+######################################################################################################################################################
+#                                                 #
+# permission is for allow for only vips etc..     #
+# if is empty all players can buy.                #
+#                                                 #
+###################################################
+kits:
+ # -- ARCHER INIT
+ archer:
+  name: 'Arqueiro'
+  permission: 'kit.arqueiro'
+  icon_can: 'BOW : 1 : display=&aArqueiro : lore=&7Este kit é para aqueles que possuem\n&7habilidades inacreditáveis com um\n&7arco na mão. Sera necessária muita\n&7calma para atingir seus inimigos.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cArqueiro : lore=&7Este kit é para aqueles que possuem\n&7habilidades inacreditáveis com um\n&7arco na mão. Sera necessária muita\n&7calma para atingir seus inimigos.\n \n&cVocê não possui este kit.'
+  icon: 'BOW : 1 : display=&aArqueiro (Evolução: {current}/{max}) : lore=&7Este kit é para aqueles que possuem\n&7habilidades inacreditáveis com um\n&7arco na mão. Sera necessária muita\n&7calma para atingir seus inimigos.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aArqueiro : lore=&7Este kit é para aqueles que possuem\n&7habilidades inacreditáveis com um\n&7arco na mão. Sera necessária muita\n&7calma para atingir seus inimigos.\n \n&7Custo: &e5.000 coins &7ou &6200 cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    price: 5000
+    cash: 200
+    desc: '&eItens:\n&71x Arco\n&78x Flecha\n \n&eAdquirido!'
+    items:
+    - 'BOW : 1'
+    - 'ARROW : 8'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Arco (Força I)\n&716x Flecha\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'BOW : 1 : enchantments=ARROW_DAMAGE:1'
+    - 'ARROW : 16'
+   3:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Arco (Força 2)\n&732x Flecha\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'BOW : 1 : enchantments=ARROW_DAMAGE:2'
+    - 'ARROW : 32'
+ # -- Archer END
+ # -- ENCHANTER INIT
+ enchanter:
+  name: 'Encantador'
+  permission: 'kit.encantador'
+  icon_can: 'BOOKSHELF : 1 : display=&aEncantador : lore=&7Faça seus itens brilharem literalmente!\n&7Serão necessárias habilidades sobrenaturais\n&7para fazer de seus itens armas letais.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cEncantador : lore=&7Faça seus itens brilharem literalmente!\n&7Serão necessárias habilidades sobrenaturais\n&7para fazer de seus itens armas letais.\n \n&cVocê não possui este kit.'
+  icon: 'BOOKSHELF : 1 : display=&aEncantador (Evolução: {current}/{max}) : lore=&7Faça seus itens brilharem literalmente!\n&7Serão necessárias habilidades sobrenaturais\n&7para fazer de seus itens armas letais.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aEncantador : lore=&7Faça seus itens brilharem literalmente!\n&7Serão necessárias habilidades sobrenaturais\n&7para fazer de seus itens armas letais.\n \n&7Custo: &e5.000 coins &7ou &6200 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Mesa de Encantamentos\n&73x Potes de XP\n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'ENCHANTMENT_TABLE : 1'
+    - 'EXP_BOTTLE : 3'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Mesa de Encantamentos\n&76x Potes de XP\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'ENCHANTMENT_TABLE : 1'
+    - 'EXP_BOTTLE : 6'
+ # -- ENCHANTER END
+ # -- MAGO INIT
+ mago:
+  name: 'Mago'
+  permission: 'kit.mago'
+  icon_can: 'potion : 1 : display=&aMago : lore=&7Acredita em magia? \n&7esse kit faz isso\n&7pfaça isso e se camufle\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cMago : lore=&7Acredita em magia? \n&7esse kit faz isso\n&7pfaça isso e se camufle\n \n&cVocê não possui este kit.'
+  icon: 'potion : 1 : display=&aMago (Evolução: {current}/{max}) : lore=&7Acredita em magia? \n&7esse kit faz isso\n&7pfaça isso e se camufle\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aMago : lore=&7Acredita em magia? \n&7esse kit faz isso\n&7pfaça isso e se camufle\n \n&7Custo: &e5.000 coins &7ou &6200 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&72x Poção (Regeneração I - 00:45) \n&71x Maça Dourada\n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'potion:8193 : 2'
+    - 'golden_apple : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&73x Poção (Regeneração I - 00:45) \n&73x Maça Dourada\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'potion:8193 : 3'
+    - 'golden_apple : 3'
+   3:
+    name: 'Evolução III'
+    desc: '&eItens:\n&73x Poção (Regeneração I - 00:45) \n&75x Maça Dourada\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e15.000 coins'
+    price: 15000
+    items:
+    - 'potion:8193 : 3'
+    - 'golden_apple : 5'
+ # -- MAGO END
+ # -- PALADINO INIT
+ paladino:
+  name: 'Paladino'
+  permission: 'kit.paladino'
+  icon_can: 'diamond_chestplate : 1 : display=&aPaladino : lore=&7Uma boa armadura sempre ajuda.\n&7Tenha o que seus adversarios nao espera.\n&7ser forte sempre ajuda no combate.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cPaladino : lore=&7Uma boa armadura sempre ajuda.\n&7Tenha o que seus adversarios nao espera.\n&7ser forte sempre ajuda no combate.\n \n&cVocê não possui este kit.'
+  icon: 'diamond_chestplate : 1 : display=&aPaladino (Evolução: {current}/{max}) : lore=&7Uma boa armadura sempre ajuda.\n&7Tenha o que seus adversarios nao espera.\n&7ser forte sempre ajuda no combate.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aPaladino : lore=&7Uma boa armadura sempre ajuda.\n&7Tenha o que seus adversarios nao espera.\n&7ser forte sempre ajuda no combate.\n \n&7Custo: &e5.000 coins &7ou &6200 Cash \n&7Exclusivo para &8[Ferro]'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Peioral de Diamante\n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'diamond_chestplate : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Peioral de Diamante Protection 1\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e5.000 coins'
+    price: 5000
+    items:
+    - 'DIAMOND_CHESTPLATE:0 : 1 : enchantments=PROTECTION_ENVIRONMENTAL:1'
+   3:
+    name: 'Evolução III'
+    desc: '&eItens:\n&71x Peioral de Diamante Protection 2\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'DIAMOND_CHESTPLATE:0 : 1 : enchantments=PROTECTION_ENVIRONMENTAL:2'
+   4:
+    name: 'Evolução IV'
+    desc: '&eItens:\n&71x Peioral de Diamante Protection 3\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'DIAMOND_CHESTPLATE:0 : 1 : enchantments=PROTECTION_ENVIRONMENTAL:3'
+ # -- PALADINO END
+ # -- Insuperavel INIT
+ insuperavel:
+  name: 'Insuperavel'
+  permission: 'kit.insuperavel'
+  icon_can: 'diamond_block : 1 : display=&aInsuperavel : lore=&7Ruim no skywars?\n&7Este combo vai te ajudar.\n&7ser forte sempre ajuda no combate.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cInsuperavel : lore=&7Ruim no skywars?\n&7Este combo vai te ajudar.\n&7ser forte sempre ajuda no combate.\n \n&cVocê não possui este kit.'
+  icon: 'diamond_block : 1 : display=&aInsuperavel (Evolução: {current}/{max}) : lore=&7Ruim no skywars?\n&7Este combo vai te ajudar.\n&7ser forte sempre ajuda no combate.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aInsuperavel : lore=&7Ruim no skywars?\n&7Este combo vai te ajudar.\n&7ser forte sempre ajuda no combate.\n \n&7Custo: &e70.000 coins &7ou &6400 Cash\n \n&7Exclusivo para &b[Diamante]'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x armadura completa de chainmail\n&71xespada de pedra\n \n&eAdquirido!'
+    price: 70000
+    cash: 500
+    items:
+    - 'chainmail_helmet : 1'
+    - 'chainmail_chestplate : 1'
+    - 'chainmail_leggings : 1'
+    - 'chainmail_boots : 1'
+    - 'stone_sword : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x armadura completa de iron\n&71xespada de iron\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e20.000 coins'
+    price: 100000
+    items:
+    - 'iron_helmet : 1'
+    - 'iron_chestplate : 1'
+    - 'iron_leggings : 1'
+    - 'iron_boots : 1'
+    - 'iron_sword : 1'
+   3:
+    name: 'Evolução III'
+    desc: '&eItens:\n&71x armadura completa de diamante\n&71x espada de diamante\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e50.000 coins'
+    price: 100000
+    items:
+    - 'diamond_helmet : 1'
+    - 'diamond_chestplate : 1'
+    - 'diamond_leggings : 1'
+    - 'diamond_boots : 1'
+    - 'diamond_sword : 1'
+   4:
+    name: 'Evolução IV'
+    desc: '&eItens:\n&71x armadura completa de diamante (Protection 2)\n&71x espada de diamante (sharpenes 1 e fireaspect 1)\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e100.000 coins'
+    price: 100000
+    items:
+    - 'diamond_helmet : 1 : enchantments=PROTECTION_ENVIRONMENTAL:2'
+    - 'diamond_chestplate : 1 : enchantments=PROTECTION_ENVIRONMENTAL:2'
+    - 'diamond_leggings : 1 : enchantments=PROTECTION_ENVIRONMENTAL:2'
+    - 'diamond_boots : 1 : enchantments=PROTECTION_ENVIRONMENTAL:2'
+    - 'diamond_sword:0 : 1 : enchantments=DAMAGE_ALL:1\nFIRE_ASPECT:1'
+   5:
+    name: 'Evolução V'
+    desc: '&eItens:\n&71x armadura completa de diamane (Protection 4)\n&71xespada de diamante (sharpenes 3 e fireaspect 1)\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e500.000 coins'
+    price: 500000
+    items:
+    - 'diamond_helmet : 1 : enchantments=PROTECTION_ENVIRONMENTAL:4'
+    - 'diamond_chestplate : 1 : enchantments=PROTECTION_ENVIRONMENTAL:4'
+    - 'diamond_leggings : 1 : enchantments=PROTECTION_ENVIRONMENTAL:4'
+    - 'diamond_boots : 1 : enchantments=PROTECTION_ENVIRONMENTAL:4'
+    - 'diamond_sword:0 : 1 : enchantments=DAMAGE_ALL:3\nFIRE_ASPECT:1'
+ # -- Insuperavel END
+ # -- RUSHER INIT
+ rusher:
+  name: 'Rusher'
+  permission: 'kit.rusher'
+  icon_can: 'iron_sword : 1 : display=&aRusher : lore=&7Velocidade é a palavra chave para este kit. \n&7Apenas uma espada e blocos serão\n&7suficientes para vencer essa batalha?\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cRusher : lore=&7Velocidade é a palavra chave para este kit. \n&7Apenas uma espada e blocos serão\n&7suficientes para vencer essa batalha?\n \n&cVocê não possui este kit.'
+  icon: 'iron_sword : 1 : display=&aRusher (Evolução: {current}/{max}) : lore=&7Velocidade é a palavra chave para este kit. \n&7Apenas uma espada e blocos serão\n&7suficientes para vencer essa batalha?.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aRusher : lore=&7Velocidade é a palavra chave para este kit. \n&7Apenas uma espada e blocos serão\n&7suficientes para vencer essa batalha?\n \n&7Custo: &e5.000 coins &7ou &6200 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Espada de diamante (Afiação I)\n&71x Poção (Velocidade II - 1:07)\n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'iron_sword : 1 : enchantments=DAMAGE_ALL:1'
+    - '0373:16418 : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Espada de diamante (Afiação II)\n&72x Poção (Velocidade II - 1:07)\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e5.000 coins'
+    price: 5000
+    items:
+    - 'iron_sword : 1 : enchantments=DAMAGE_ALL:2'
+    - '0373:16418 : 2'
+ # -- RUSHER END
+ # -- GUERREIRO INIT
+ guerreiro:
+  name: 'Guerreiro'
+  permission: 'kit.guerreiro'
+  icon_can: 'diamond_sword : 1 : display=&aGuerreiro : lore=&7Seus músculos e neurônios serão julgados ao utilizar este kit.\n&7Faça da sua virilidade sua arma mais poderosa.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cGuerreiro : lore=&7Seus músculos e neurônios serão julgados ao utilizar este kit.\n&7Faça da sua virilidade sua arma mais poderosa.\n \n&cVocê não possui este kit.'
+  icon: 'diamond_sword : 1 : display=&aGuerreiro (Evolução: {current}/{max}) : lore=&7Seus músculos e neurônios serão julgados ao utilizar este kit.\n&7Faça da sua virilidade sua arma mais poderosa.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aGuerreiro : lore=&7Seus músculos e neurônios serão julgados ao utilizar este kit.\n&7Faça da sua virilidade sua arma mais poderosa.\n \n&7Custo: &e5.000 coins &7ou &6200 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Espada de diamante \n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'diamond_sword : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Espada de diamante (Afiação I) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e5.000 coins'
+    price: 5000
+    items:
+    - 'diamond_sword : 1 : enchantments=DAMAGE_ALL:2'
+   3:
+    name: 'Evolução III'
+    desc: '&eItens:\n&71x Espada de diamante (Afiação II) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'diamond_sword : 1 : enchantments=DAMAGE_ALL:3'
+ # -- GUERREIRO END
+ # -- Trapaceiro INIT
+ stick:
+  name: 'Trapaceiro'
+  permission: 'kit.guerreiro'
+  icon_can: 'Stick : 1 : display=&aTrapaceiro : lore=&7Esteja sempre um passo à frente,\n&7nada como uma ajudinha para derrotar o seu adversário.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cTrapaceiro : lore=&7Esteja sempre um passo à frente,\n&7nada como uma ajudinha para derrotar o seu adversário.\n \n&cVocê não possui este kit.'
+  icon: 'Stick : 1 : display=&aTrapaceiro (Evolução: {current}/{max}) : lore=&7Esteja sempre um passo à frente,\n&7nada como uma ajudinha para derrotar o seu adversário.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aTrapaceiro : lore=&7Esteja sempre um passo à frente,\n&7nada como uma ajudinha para derrotar o seu adversário.\n \n&7Custo: &e5.000 coins &7ou &6200 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Stick (Repulsão II)\n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'Stick : 1 : enchantments=KNOCKBACK:1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Stick (Repulsão II) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'diamond_sword : 1 : enchantments=KNOCKBACK:2'    
+ # -- stick END
+ # -- FOGAREL INIT
+ fogarel:
+  name: 'Fogarel'
+  permission: 'kit.fogarel'
+  icon_can: 'lava_bucket : 1 : display=&aFogarel : lore=&7Tá pegando fogo!\n&7Faça-os queimar.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cFogarel : lore=&7Tá pegando fogo!\n&7Faça-os queimar.\n \n&cVocê não possui este kit.'
+  icon: 'lava_bucket : 1 : display=&aFogarel (Evolução: {current}/{max}) : lore=&7Tá pegando fogo!\n&7Faça-os queimar.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aFogarel : lore=&7Tá pegando fogo!\n&7Faça-os queimar.\n \n&7Custo: &e10.000 coins &7ou &6400 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&72x balde de Lava \n&71x Poção (Resistencia ao Fogo - 3:00) \n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - 'lava_bucket : 2'  
+    - '0373:8227 : 1'
+ # -- FOGAREL END
+ # -- NINJA INIT
+ ninja:
+  name: 'Ninja'
+  permission: 'kit.ninja'
+  icon_can: 'feather : 1 : display=&aNinja : lore=&7Seja o ninja mais rapido do mundo.\n&7utilize a sua poção de velocidade.\n&7e sua espada para o combate.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cNinja : lore=&7Seja o ninja mais rapido do mundo.\n&7utilize a sua poção de velocidade.\n&7e sua espada para o combate.\n \n&cVocê não possui este kit.'
+  icon: 'feather : 1 : display=&aNinja (Evolução: {current}/{max}) : lore=&7Seja o ninja mais rapido do mundo.\n&7utilize a sua poção de velocidade.\n&7e sua espada para o combate.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aNinja : lore=&7Seja o ninja mais rapido do mundo.\n&7utilize a sua poção de velocidade.\n&7e sua espada para o combate.\n \n&7Custo: &e10.000 coins &7ou &6400 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Espada de Iron (Afiação I) \n&71x Poção (Speed - 2:15) \n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - 'iron_sword : 1 : enchantments=DAMAGE_ALL:1' 
+    - '0373:16386 : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Espada de Iron (Afiação I) \n&71x Poção (Speed - 6:00) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'    
+    price: 10000
+    items:
+    - 'iron_sword : 1 : enchantments=DAMAGE_ALL:1' 
+    - '0373:16450 : 1'
+ # -- NINJA END
+ # -- TROLL INIT
+ troll:
+  name: 'Troll'
+  permission: 'kit.troll'
+  icon_can: 'web : 1 : display=&aTroll : lore=&7Se você é zueiro\n&7use este kit.\n&7prenda seus inimigos e mate-os.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cTroll : lore=&7Se você é zueiro\n&7use este kit.\n&7prenda seus inimigos e mate-os.\n \n&cVocê não possui este kit.'
+  icon: 'web : 1 : display=&aTroll (Evolução: {current}/{max}) : lore=&7Se você é zueiro\n&7use este kit.\n&7prenda seus inimigos e mate-os.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aTroll : lore=&7Se você é zueiro\n&7use este kit.\n&7prenda seus inimigos e mate-os.\n \n&7Custo: &e10.000 coins &7ou &6400 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&73x Teias \n&716x Ovos \n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - 'web : 3' 
+    - 'egg : 16'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&77x Teias \n&716x Ovos \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'    
+    price: 10000
+    items:
+    - 'web : 7' 
+    - 'egg : 16'
+ # -- TROLL END
+ # -- QUANTUM INIT
+ quantum:
+  name: 'Quantum'
+  permission: 'kit.quantum'
+  icon_can: 'emerald_block : 1 : display=&aQuantum : lore=&7vale 1 ajudinha ae!\n&7use beacon para\n&7ser o melhor de todos.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cQuantum : lore=&7vale 1 ajudinha ae!\n&7use beacon para\n&7ser o melhor de todos.\n \n&cVocê não possui este kit.'
+  icon: 'emerald_block : 1 : display=&aQuantum (Evolução: {current}/{max}) : lore=&7vale 1 ajudinha ae!\n&7use beacon para\n&7ser o melhor de todos.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aQuantum : lore=&7vale 1 ajudinha ae!\n&7use beacon para\n&7ser o melhor de todos.\n \n&7Custo: &e12.000 coins &7ou &6500 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&732x Blocos de Espada \n&71x Sinalizador \n \n&eAdquirido!'
+    price: 12000
+    cash: 500
+    items:
+    - 'emerald_block : 32' 
+    - 'beacon : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&764x Blocos de Espada \n&73x Sinalizador \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e20.000 coins'    
+    price: 20000
+    items:
+    - 'emerald_block : 64' 
+    - 'beacon : 3'
+ # -- QUANTUM END
+ # -- MANIACO INIT
+ maniaco:
+  name: 'Maniaco'
+  permission: 'kit.maniaco'
+  icon_can: 'blaze_powder : 1 : display=&aManiaco : lore=&7Viciado em matar?\n&7Não fique parado.\n&7Estes equipamentos vão te ajudar.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cManiaco : lore=&7Viciado em matar?\n&7Não fique parado.\n&7Estes equipamentos vão te ajudar.\n \n&cVocê não possui este kit.'
+  icon: 'blaze_powder : 1 : display=&aManiaco (Evolução: {current}/{max}) : lore=&7Viciado em matar?\n&7Não fique parado.\n&7Estes equipamentos vão te ajudar.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aManiaco : lore=&7Viciado em matar?\n&7Não fique parado.\n&7Estes equipamentos vão te ajudar.\n \n&7Custo: &e10.000 coins &7ou &6400 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Isqueiro \n&71x Maça Dourada \n&71x Peitoral de Ferro (Protection I) \n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - 'flint_and_steel : 1' 
+    - 'golden_apple : 1'
+    - 'iron_chestplate : 1 : enchantments=PROTECTION_ENVIRONMENTAL:1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Isqueiro \n&72x Maça Dourada \n&71x Peitoral de Ferro (Protection II) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e5.000 coins'    
+    price: 5000
+    items:
+    - 'flint_and_steel : 1' 
+    - 'golden_apple : 2'
+    - 'iron_chestplate : 1 : enchantments=PROTECTION_ENVIRONMENTAL:2'
+ # -- MANIACO END
+ # -- CONFEITEIRO INIT
+ confeiteiro:
+  name: 'Confeiteiro'
+  permission: 'kit.confeiteiro'
+  icon_can: 'cake : 1 : display=&aConfeiteiro : lore=&7você gosta de comer?\n&7Vençã as partida comendo\n&7Isso vai humilhar seus oponentes.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cConfeiteiro : lore=&7você gosta de comer?\n&7Vençã as partida comendo\n&7Isso vai humilhar seus oponentes.\n \n&cVocê não possui este kit.'
+  icon: 'cake : 1 : display=&aConfeiteiro (Evolução: {current}/{max}) : lore=&7você gosta de comer?\n&7Vençã as partida comendo\n&7Isso vai humilhar seus oponentes.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aConfeiteiro : lore=&7você gosta de comer?\n&7Vençã as partida comendo\n&7Isso vai humilhar seus oponentes.\n \n&7Custo: &e5.000 coins &7ou &6200 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Bolo \n&732x Ovos \n \n&eAdquirido!'
+    price: 5000
+    cash: 200
+    items:
+    - 'cake : 1' 
+    - 'egg : 32'
+ # -- CONFEITEIRO END
+ # -- BIN LADEN INIT
+ binladen:
+  name: 'Bin Laden'
+  permission: 'kit.binladen'
+  icon_can: 'tnt : 1 : display=&aBin Laden : lore=&7Seja um dos melhores\n&7Terroristas do mundo.\n&7use suas tnt para um terrorismo.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cBin Laden : lore=&7Seja um dos melhores\n&7Terroristas do mundo.\n&7use suas tnt para um terrorismo.\n \n&cVocê não possui este kit.'
+  icon: 'tnt : 1 : display=&aBin Laden (Evolução: {current}/{max}) : lore=&7Seja um dos melhores\n&7Terroristas do mundo.\n&7use suas tnt para um terrorismo.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aBin Laden : lore=&7Seja um dos melhores\n&7Terroristas do mundo.\n&7use suas tnt para um terrorismo.\n \n&7Custo: &e10.000 coins &7ou &6400 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&75x TNT \n&71x Isqueiro\n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - 'tnt : 5' 
+    - 'flint_and_steel : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&710x TNT \n&71x Isqueiro\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'
+    price: 10000
+    items:
+    - 'tnt : 10' 
+    - 'flint_and_steel : 1'
+ # -- BIN LADEN END
+ # -- FANTASMA INIT
+ fantasma:
+  name: 'Fantasma'
+  permission: 'kit.fantasma'
+  icon_can: 'glass_bottle : 1 : display=&aFantasma : lore=&7Seja um fantasma\n&7e mate seus oponentes de supresa.\n&7mas tenha cuidado!\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cFantasma : lore=&7Seja um fantasma\n&7e mate seus oponentes de supresa.\n&7mas tenha cuidado!\n \n&cVocê não possui este kit.'
+  icon: 'glass_bottle : 1 : display=&aFantasma (Evolução: {current}/{max}) : lore=&7Seja um fantasma\n&7e mate seus oponentes de supresa.\n&7mas tenha cuidado!\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aFantasma : lore=&7Seja um fantasma\n&7e mate seus oponentes de supresa.\n&7mas tenha cuidado!\n \n&7Custo: &e10.000 coins &7ou &6400 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Poção (Invisibilidade 3:00) \n&71x Espada de Iron \n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - '0373:8238 : 1' 
+    - 'iron_sword : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Poção (Invisibilidade 8:00) \n&71x Espada de Diamante \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'    
+    price: 10000
+    items:
+    - '0373:8270 : 1' 
+    - 'diamond_sword : 1'
+ # -- FANTASMA END
+ # -- ENDERMAN INIT
+ enderman:
+  name: 'Enderman'
+  permission: 'kit.endermen'
+  icon_can: 'ender_pearl : 1 : display=&aEnderman : lore=&7seja um enderman\n&7e se teleporta pelas ilhas.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cEnderman : lore=&7seja um enderman\n&7e se teleporta pelas ilhas.\n \n&cVocê não possui este kit.'
+  icon: 'ender_pearl : 1 : display=&aEnderman (Evolução: {current}/{max}) : lore=&7seja um enderman\n&7e se teleporta pelas ilhas.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aEnderman : lore=&7seja um enderman\n&7e se teleporta pelas ilhas.\n \n&7Custo: &e10.000 coins &7ou &6400 Cash\n \n&7Exclusivo para &4[Supremo]'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Ender Pearl\n \n&eAdquirido!'
+    price: 10000
+    cash: 400
+    items:
+    - 'ender_pearl : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&72x Ender Pearl\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e20.000 coins'
+    price: 20000
+    items:
+    - 'ender_pearl : 2'
+   3:
+    name: 'Evolução III'
+    desc: '&eItens:\n&73x Ender Pearl\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e70.000 coins'    
+    price: 70000
+    items:
+    - 'ender_pearl : 3'
+   4:
+    name: 'Evolução IV'
+    desc: '&eItens:\n&75x Ender Pearl\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e100.000 coins'    
+    price: 100000
+    items:
+    - 'ender_pearl : 5'
+ # -- ENDERMAN END
+ # -- VIKING INIT
+ viking:
+  name: 'Viking'
+  permission: 'kit.viking'
+  icon_can: 'diamond_axe : 1 : display=&aViking : lore=&7Você tem habiidades com\n&7um machado na mão?\n&7Então use ele!\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cViking : lore=&7Você tem habiidades com\n&7um machado na mão?\n&7Então use ele!\n \n&cVocê não possui este kit.'
+  icon: 'diamond_axe : 1 : display=&aViking (Evolução: {current}/{max}) : lore=&7Você tem habiidades com\n&7um machado na mão?\n&7Então use ele!\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aViking : lore=&7Você tem habiidades com\n&7um machado na mão?\n&7Então use ele!\n \n&7Custo: &e10.000 coins &7ou &6400 Cash\n \n&7Exclusivo para &4[Supremo]'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Machado (Afiação 1) \n&71x Capacete diamante \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e10.000 coins'        
+    price: 10000
+    cash: 400
+    items:
+    - 'diamond_axe : 1 : enchantments=DAMAGE_ALL:1' 
+    - 'diamond_helmet : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Machado (Afiação 2) \n&71x Capacete diamante (Protection 1) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e30.000 coins'        
+    price: 30000
+    items:
+    - 'diamond_axe : 1 : enchantments=DAMAGE_ALL:2' 
+    - 'diamond_helmet : 1 : enchantments=PROTECTION_ENVIRONMENTAL:1'
+   3:
+    name: 'Evolução III'
+    desc: '&eItens:\n&71x Machado (Afiação 3) \n&71x Capacete diamante (Protection 2)\n&7 Poção (Força 3:00) \n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e101.000 coins'        
+    price: 101000
+    items:
+    - 'diamond_axe : 1 : enchantments=DAMAGE_ALL:3' 
+    - 'diamond_helmet : 1 : enchantments=PROTECTION_ENVIRONMENTAL:1'
+    - '0373:8201 : 1'
+ # -- VIKING END
+ # -- FLASH INIT
+ flash:
+  name: 'Flash'
+  permission: 'kit.flash'
+  icon_can: 'nether_star : 1 : display=&aFlash : lore=&7Sera o cara mais rapido\n&7do mundo e mate seus oponentes.\n \n&aClique para selecionar!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cFlash : lore=&7Sera o cara mais rapido\n&7do mundo e mate seus oponentes.\n \n&cVocê não possui este kit.'
+  icon: 'nether_star : 1 : display=&aFlash (Evolução: {current}/{max}) : lore=&7Sera o cara mais rapido\n&7do mundo e mate seus oponentes.\n \n{items}\n&aClique para evoluir!'
+  icon_buy: '160:14 : 1 : display=&aFlash : lore=&7Sera o cara mais rapido\n&7do mundo e mate seus oponentes.\n \n&7Custo: &e15.000 coins &7ou &6500 Cash'
+  levels:
+   1:
+    name: 'Evolução I'
+    desc: '&eItens:\n&71x Poção (Speed - 2:16)\n \n&eAdquirido!'
+    price: 15000
+    cash: 500
+    items:
+    - '0373:16386 : 1'
+   2:
+    name: 'Evolução II'
+    desc: '&eItens:\n&71x Poção (Speed - 6:00)\n \n&eAdquirido!'
+    desc_buy: '&7Custo: &e25.000 coins'    
+    price: 25000
+    items:
+    - '0373:16450 : 1'
+ # -- FLASH END

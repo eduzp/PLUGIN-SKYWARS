@@ -1,0 +1,4 @@
+# Lista de lobbies adicione usando o formato:
+# - 'IP:PORTA, NOME_BUNGEE_CORD'
+# EX: - '127.0.0.1:25565, LobbySW1'
+lobbies: []

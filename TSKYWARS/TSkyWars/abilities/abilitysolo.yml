@@ -1,0 +1,136 @@
+######################################################################################################################################################
+#                                                                                                                                                    #
+# ITEMSTACK:                                                                                                                                         #
+#                                                                                                                                                    #
+# MATERIAL:DURABILITY : AMOUNT : (customizable keys)                                                                                                 #
+#                                                                                                                                                    #
+# customizable keys:                                                                                                                                 #
+# - enchantments=ENCHANTMENT:LEVEL                                                                                                                   #
+# - display=DISPLAYNAME                                                                                                                              #
+# - lore=CURRENTLINE\nNEXTLINE                                                                                                                       #
+# - owner=SKULLOWNER (only for skull_item)                                                                                                           #
+# - page=FIRSTPAGE{page}NEXTPAGE (only for book)                                                                                                     #
+# - author=AUTHOR OF BOOK (only for book)                                                                                                            #
+# - title=TITLEOF BOOK (only for book)                                                                                                               #
+# - flags=ITEMFLAG (hide ItemFlags like the damage of the sword)                                                                                     #
+#                                                                                                                                                    #
+# avaibleflags: HIDE_ATTRIBUTES, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE, HIDE_PLACED_ON, HIDE_DESTROYS, HIDE_ENCHANTS                                 #
+#                                                                                                                                                    #
+# OBS: flags=all for all flags!                                                                                                                      #
+#                                                                                                                                                    #
+######################################################################################################################################################
+#                                                 #
+# permission is for allow for only vips..         #
+# if is empty all players can buy.                #
+#                                                 #
+###################################################
+abilities:
+ # Firework INIT!
+ firework:
+  name: 'Foguete'
+  skillId: 0
+  price: 20000
+  cash: 200
+  permission: 'abilities.foguete1'
+  icon_can: 'RABBIT_HIDE : 1 : display=&aFoguete : lore=&7Receba um foguete que te impulsiona\n&7para cima sempre que você precisar!\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cFoguete : lore=&7Receba um foguete que te impulsiona\n&7para cima sempre que você precisar!\n \n&cVocê não possui esta habilidade.'
+  icon: 'RABBIT_HIDE : 1 : display=&aFoguete : lore=&7Receba um foguete que te impulsiona\n&7para cima sempre que você precisar!\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aFoguete : lore=&7Receba um foguete que te impulsiona\n&7para cima sempre que você precisar!\n \n&7Custo: &e20.000 coins &7ou &6200 cash\n \n&7Exclusivo para &2Lendário &7ou superior.'
+  items:
+  - 'FIREWORK : 1 : display=&a[Habilidade] Foguete'
+ # Viajante INIT
+ viajante:
+  name: 'Viajante'
+  skillId: 1
+  price: 20000
+  cash: 200
+  permission: 'abilities.viajante1'
+  icon_can: 'EYE_OF_ENDER : 1 : display=&aViajante : lore=&7Vá para onde quiser!\n&7Receba uma enderpearl a cada dois\n&7oponentes abatidos.\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cViajante : lore=&7Vá para onde quiser!\n&7Receba uma enderpearl a cada dois\n&7oponentes abatidos.\n \n&cVocê não possui esta habilidade.'
+  icon: 'EYE_OF_ENDER : 1 : display=&aViajante : lore=&7Vá para onde quiser!\n&7Receba uma enderpearl a cada dois\n&7oponentes abatidos.\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aViajante : lore=&7Vá para onde quiser!\n&7Receba uma enderpearl a cada dois\n&7oponentes abatidos.\n \n&7Custo: &e20.000 coins &7ou &6200 cash\n \n&7Exclusivo para &5Heroi &7ou superior.'
+  items: []
+ # Reversor INIT
+ reversor:
+  name: 'Reversor'
+  skillId: 2
+  price: 20000
+  cash: 200
+  permission: 'abilities.reversor1'
+  icon_can: 'SNOW_BALL : 1 : display=&aReversor : lore=&7Troque de lugar com seus inimigos!\n&7Ao acertar uma Bola de Neve em\n&7seu inimigo, ele trocará de\n&7lugar com você.\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cReversor : lore=&7Troque de lugar com seus inimigos!\n&7Ao acertar uma Bola de Neve em\n&7seu inimigo, ele trocará de\n&7lugar com você.\n \n&cVocê não possui esta habilidade.'
+  icon: 'SNOW_BALL : 1 : display=&aReversor : lore=&7Troque de lugar com seus inimigos!\n&7Ao acertar uma Bola de Neve em\n&7seu inimigo, ele trocará de\n&7lugar com você.\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aReversor : lore=&7Troque de lugar com seus inimigos!\n&7Ao acertar uma Bola de Neve em\n&7seu inimigo, ele trocará de\n&7lugar com você.\n \n&7Custo: &e20.000 coins &7ou &6200 cash\n \n&7Exclusivo para &bImperador &7ou superior.'
+  items:
+  - 'SNOW_BALL : 6 : display=&a[Habilidade] Reversor'
+ # Sedento INIT
+ sedento:
+  name: 'Sedento'
+  skillId: 3
+  price: 20000
+  cash: 200
+  permission: 'abilities.sedento1'
+  icon_can: 'BREAD : 1 : display=&aSedento : lore=&7A fome não será problemas em\n&7suas batalhas.\n \n&7Você não sentirá fome na partida.\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cSedento : lore=&7A fome não será problemas em\n&7suas batalhas.\n \n&7Você não sentirá fome na partida.\n \n&cVocê não possui esta habilidade.'
+  icon: 'BREAD : 1 : display=&aSedento : lore=&7A fome não será problemas em\n&7suas batalhas.\n \n&7Você não sentirá fome na partida.\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aSedento : lore=&7A fome não será problemas em\n&7suas batalhas.\n \n&7Você não sentirá fome na partida.\n \n&7Custo: &e20.000 coins &7ou &6200 cash\n \n&7Exclusivo para &3Campeão &7ou superior.'
+  items: []
+ # Assassino INIT
+ assassino:
+  name: 'Assassino'
+  skillId: 4
+  price: 20000
+  cash: 200
+  permission: 'abilities.assassino1'
+  icon_can: 'WOOD_SWORD : 1 : display=&aAssassino : lore=&7Mate seu inimigo e fique ainda\n&7mais forte por alguns segundos!\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cAssassino : lore=&7Mate seu inimigo e fique ainda\n&7mais forte por alguns segundos!\n \n&cVocê não possui esta habilidade.'
+  icon: 'WOOD_SWORD : 1 : display=&aAssassino : lore=&7Mate seu inimigo e fique ainda\n&7mais forte por alguns segundos!\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aAssassino : lore=&7Mate seu inimigo e fique ainda\n&7mais forte por alguns segundos!\n \n&7Custo: &e20.000 coins &7ou &6200 cash'
+ # Vingança INIT
+ vinganca:
+  name: 'Vingança'
+  skillId: 5
+  price: 20000
+  cash: 200
+  permission: 'abilities.vinganca1'
+  icon_can: 'TNT : 1 : display=&aVingança : lore=&7Tenha uma última chance de matar seu inimigo.\n&7cause uma explosão na hora da sua morte!\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cVingança : lore=&7Tenha uma última chance de matar seu inimigo.\n&7cause uma explosão na hora da sua morte!\n \n&cVocê não possui esta habilidade.'
+  icon: 'TNT : 1 : display=&aVingança : lore=&7Tenha uma última chance de matar seu inimigo.\n&7cause uma explosão na hora da sua morte!\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aVingança : lore=&7Tenha uma última chance de matar seu inimigo.\n&7cause uma explosão na hora da sua morte!\n \n&7Custo: &e20.000 coins &7ou &6200 cash\n \n&7Exclusivo para &4Supremo &7ou superior.'
+  items: []
+ # Fênix INIT
+ fenix:
+  name: 'Fênix'
+  skillId: 6
+  price: 30000
+  cash: 400
+  permission: 'abilities.fenix1'
+  icon_can: 'BLAZE_POWDER : 1 : display=&aFênix : lore=&7Tenha uma segunda chance de\n&7provar que você é realmente bom!\n&7Receba uma vida extra após matar\n&73 inimigos em uma partida.\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cFênix : lore=&7Tenha uma segunda chance de\n&7provar que você é realmente bom!\n&7Receba uma vida extra após matar\n&73 inimigos em uma partida.\n \n&cVocê não possui esta habilidade.'
+  icon: 'BLAZE_POWDER : 1 : display=&aFênix : lore=&7Tenha uma segunda chance de\n&7provar que você é realmente bom!\n&7Receba uma vida extra após matar\n&73 inimigos em uma partida.\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aFênix : lore=&7Tenha uma segunda chance de\n&7provar que você é realmente bom!\n&7Receba uma vida extra após matar\n&73 inimigos em uma partida.\n \n&7Custo: &e30.000 coins &7ou &6400 cash\n \n&7Exclusivo para &bImperador &7ou superior.'
+  items: []
+ # Blindado INIT
+ blindado:
+  name: 'Blindado'
+  skillId: 7
+  price: 25000
+  cash: 1250
+  permission: 'abilities.blindado1'
+  icon_can: 'DIAMOND_CHESTPLATE : 1 : display=&aBlindado : lore=&7Proteção é seu segundo nome!\n&7Receba um nível de proteção em\n&7sua armadura a cada dois oponentes\n&7abatidos. Sendo que o nível máximo\n&7será Proteção III\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cBlindado : lore=&7Proteção é seu segundo nome!\n&7Receba um nível de proteção em\n&7sua armadura a cada dois oponentes\n&7abatidos. Sendo que o nível máximo\n&7será Proteção III\n \n&cVocê não possui esta habilidade.'
+  icon: 'DIAMOND_CHESTPLATE : 1 : display=&aBlindado : lore=&7Proteção é seu segundo nome!\n&7Receba um nível de proteção em\n&7sua armadura a cada dois oponentes\n&7abatidos. Sendo que o nível máximo\n&7será Proteção III\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aBlindado : lore=&7Proteção é seu segundo nome!\n&7Receba um nível de proteção em\n&7sua armadura a cada dois oponentes\n&7abatidos. Sendo que o nível máximo\n&7será Proteção III\n \n&7Custo: &e25.000 coins &7ou &61.250 cash\n \n&7Exclusivo para &6Ouro &7ou superior.'
+  items: []
+ # Imparavél INIT
+ imparavel:
+  name: 'Imparavél'
+  skillId: 8
+  price: 30000
+  cash: 1000
+  permission: 'abilities.imparavel1'
+  icon_can: 'DIAMOND_SWORD : 1 : display=&aImparável : lore=&7Seja cada vez mais forte!\n&7Ganhe 1 nivel de afiação em sua\n&7espada de diamante a cada dois\n&7oponentes abatidos.\n \n&7Limite: &fAfiação III\n \n&eClique para usar esta habilidade!'
+  icon_cannot: 'STAINED_GLASS_PANE:14 : 1 : display=&cImparável : lore=&7Seja cada vez mais forte!\n&7Ganhe 1 nivel de afiação em sua\n&7espada de diamante a cada dois\n&7oponentes abatidos.\n \n&7Limite: &fAfiação III\n \n&cVocê não possui esta habilidade.'
+  icon: 'DIAMOND_SWORD : 1 : display=&aImparável : lore=&7Seja cada vez mais forte!\n&7Ganhe 1 nivel de afiação em sua\n&7espada de diamante a cada dois\n&7oponentes abatidos.\n \n&7Limite: &fAfiação III\n \n&eAdquirido!\n&eClique para utilizar!'
+  icon_buy: '351:8 : 1 : display=&aImparável : lore=&7Seja cada vez mais forte!\n&7Ganhe 1 nivel de afiação em sua\n&7espada de diamante a cada dois\n&7oponentes abatidos.\n \n&7Limite: &fAfiação III\n \n&7Custo: &e30.000 coins &7ou &61.000 cash\n \n&7Exclusivo para &6Ouro &7ou superior.'
+  items: []

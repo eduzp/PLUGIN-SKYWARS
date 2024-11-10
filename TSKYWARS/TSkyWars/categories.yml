@@ -1,0 +1,31 @@
+# Slots que mesmo com servidores não iram redirecionar
+# útil para caso você já esteja num servidor da categoria
+disabled:
+- 11
+skywars:
+ # Se quiser que pegue o servidor com mais players sempre
+ # coloque como false, caso esteja true vai balancear a quantidade
+ # de jogadores nos servidores.
+ balanced: true
+ slot: 11
+ icon: 'GRASS : 1 : display=&aSky Wars &lPOPULAR : lore=\n &7Você tem medo de altura? Então este\n &7jogo não é para você! No Sky Wars, você\n &7deverá eliminar os seus adversários com\n &7a ajuda dos diversos Kits e Habilidades.\n \n &7* &fSolo\n &7* &fDupla\n \n&eClique para jogar!\n&7{online} jogando.'
+ # 'IP:PORTA, BUNGEE_SERVER_NAME'
+ lobbies: []
+main_lobby:
+ # Se quiser que pegue o servidor com mais players sempre
+ # coloque como false, caso esteja true vai balancear a quantidade
+ # de jogadores nos servidores.
+ balanced: true
+ slot: 39
+ icon: 'BOOKSHELF : 1 : display=&6Lobby Principal : lore=&aClique para entrar!'
+ # 'IP:PORTA, BUNGEE_SERVER_NAME'
+ lobbies: []
+help_server:
+ # Se quiser que pegue o servidor com mais players sempre
+ # coloque como false, caso esteja true vai balancear a quantidade
+ # de jogadores nos servidores.
+ balanced: true
+ slot: 41
+ icon: 'DIAMOND : 1 : display=&bQuer ajudar o servidor? : lore= \n &7Ajude o servidor a ficar cada vez melhor\n &7adquirindo &fVIPs &7e &fCash &7em nossa loja. Além\n &7de ajudar, você ainda receberá diversos\n &7privilégios em nossos minigames!\n \n&bAcesse nossa loja: loja.redetalon.com'
+ # 'IP:PORTA, BUNGEE_SERVER_NAME'
+ lobbies: []
